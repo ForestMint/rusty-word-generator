@@ -1,9 +1,8 @@
 
-mod crate1;
+mod module1;
 
 fn main () {
 
-    // Print text to the console.
-    crate1::print_hello_world();
+    module1::print_hello_world();
 
 }
