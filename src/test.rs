@@ -1,7 +1,9 @@
 
+mod crate1;
+
 fn main () {
 
     // Print text to the console.
-    println!("Hello World!");
+    crate1::print_hello_world();
 
 }
