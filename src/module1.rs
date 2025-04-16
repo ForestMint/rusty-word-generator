@@ -1,3 +1,5 @@
+use std::fs;
+
 pub struct TrainingSet {
     list_of_words: Vec<String>
 }
@@ -5,10 +7,12 @@ pub struct TrainingSet {
 pub fn parse_training_set(path: &str) -> TrainingSet {
     let mut my_list_of_words = Vec::with_capacity(100);
 
-    /*
+    
     let contents = fs::read_to_string(path)
     .expect("Should have been able to read the file");
-    */
+    
+    println!("With text:\n{contents}");
+
 
 
     let training_set_1 = TrainingSet {
