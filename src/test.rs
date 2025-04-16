@@ -1,8 +1,11 @@
 
 mod module1;
 
+use std::fs::File;
+use std::io::{BufRead, BufReader};
+
 fn main () {
 
-    module1::print_hello_world();
+    let my_training_set = module1::parse_training_set("./some_animals_in_french.txt");
 
 }
