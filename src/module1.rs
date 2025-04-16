@@ -1,22 +1,24 @@
 use std::fs;
+use std::fs::read_to_string;
 
 pub struct TrainingSet {
     list_of_words: Vec<String>
 }
 
+fn read_lines(filename: &str) -> Vec<String> {
+    let mut result = Vec::new();
+
+    for line in read_to_string(filename).unwrap().lines() {
+        result.push(line.to_string())
+    }
+
+    result
+}
+
 pub fn parse_training_set(path: &str) -> TrainingSet {
-    let mut my_list_of_words = Vec::with_capacity(100);
-
-    
-    let contents = fs::read_to_string(path)
-    .expect("Should have been able to read the file");
-    
-    println!("With text:\n{contents}");
-
-
 
     let training_set_1 = TrainingSet {
-        list_of_words: my_list_of_words
+        list_of_words: read_lines(path)
     };
 
     training_set_1
